@@ -1,0 +1,46 @@
+@use "../scss/" as *;
+
+.order {
+	padding-block: 121px 151px;
+	background-image: url("/img/order-bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@include tablet {
+		padding-block: 61px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: fluid($max: 80px, $min: 32px, $maxW: 1920, $minW: 320);
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: fluid($max: 30px, $min: 16px, $maxW: 1920, $minW: 320);
+		text-align: center;
+	}
+
+	&__title {
+		@extend .headline-2;
+		color: var(--color-text-secondary);
+		text-transform: uppercase;
+
+		span {
+			color: var(--color-text-accent-base);
+		}
+	}
+
+	&__subtitle {
+		@extend .body-2;
+		color: var(--color-text-tertiary);
+	}
+
+	&__form {
+		color: var(--color-text-primary);
+	}
+}

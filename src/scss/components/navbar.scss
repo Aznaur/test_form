@@ -1,0 +1,55 @@
+@use "../scss/" as *;
+
+.navbar {
+	@include mobile {
+		display: none;
+		padding-inline: 16px;
+
+		.isMobile & {
+			display: flex;
+			position: absolute;
+			top: 60px;
+			left: 0;
+			min-height: 100px;
+			padding-bottom: 24px;
+			width: 100%;
+			background: rgba(16, 16, 29, 0.9);
+		}
+	}
+	&__list {
+		display: flex;
+		gap: 60px;
+
+		@include desktop {
+			gap: 40px;
+		}
+
+		@include mobile {
+			gap: 20px;
+			flex-direction: column;
+		}
+	}
+
+	&__link {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 16px;
+		text-transform: uppercase;
+		color: var(--color-text-secondary);
+		transition: 0.25s ease;
+
+		@include hover {
+			color: var(--color-text-tertiary);
+		}
+
+		&:active {
+			color: #818181;
+		}
+
+		&--active {
+			color: var(--color-text-accent-base);
+			pointer-events: none;
+		}
+	}
+}

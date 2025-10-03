@@ -1,0 +1,25 @@
+@use "../scss/" as *;
+
+.payments {
+	display: flex;
+	gap: fluid($max: 38px, $min: 16px, $maxW: 1920, $minW: 1024);
+
+	@include mobile-s {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		gap: 10px;
+
+		&-title {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 16px;
+			color: var(--color-text-tertiary);
+		}
+	}
+}

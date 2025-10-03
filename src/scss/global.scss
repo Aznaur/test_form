@@ -1,0 +1,64 @@
+@use "../scss/" as *;
+
+* {
+	white-space: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	--color-text-primary: #000000;
+	--color-text-secondary: #ffffff;
+	--color-text-tertiary: #bbbbbb;
+	--color-text-accent-base: #3e9cdc;
+	--color-background-primary: #272733;
+	--color-background-secondary: #ffffff;
+	--color-background-accent: #3e9cdc;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.container {
+	max-width: 1252px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 0 auto;
+	width: 100%;
+
+	@include mobile {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+body {
+	min-width: 320px;
+	font-family: "Lato", "Arial", sans-serif;
+	background-color: var(--color-background-primary);
+	display: flex;
+	flex-direction: column;
+	color: var(--color-text-secondary);
+}

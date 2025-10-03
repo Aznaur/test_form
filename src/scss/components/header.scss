@@ -1,0 +1,63 @@
+@use "../scss/" as *;
+
+.header {
+	min-height: fluid($max: 100px, $min: 60px, $maxW: 1920, $minW: 768);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: rgba(16, 16, 29, 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+
+		@include mobile {
+			align-items: center;
+		}
+	}
+
+	&__logo {
+		flex-shrink: 0;
+		display: flex;
+
+		@include mobile {
+			width: 145px;
+		}
+	}
+
+	&__btn {
+		display: none;
+		flex-direction: column;
+
+		@include mobile {
+			display: flex;
+		}
+
+		&-burger {
+			display: none;
+
+			@include mobile {
+				display: flex;
+
+				.isMobile & {
+					display: none;
+				}
+			}
+		}
+
+		&-close {
+			display: none;
+			color: #c4c4c4;
+
+			.isMobile & {
+				display: flex;
+			}
+		}
+	}
+}
