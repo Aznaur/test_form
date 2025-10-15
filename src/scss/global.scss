@@ -24,6 +24,10 @@ img {
 	display: block;
 }
 
+li:lang(en) {
+  display:none;
+}
+
 .container {
 	max-width: 1252px;
 	padding-left: 40px;
